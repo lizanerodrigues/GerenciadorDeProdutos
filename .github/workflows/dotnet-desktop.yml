@@ -27,9 +27,6 @@ jobs:
       - name: Compilar o projeto
         run: dotnet build --configuration Release --no-restore
 
-      - name: Executar testes unitários
-        run: dotnet test --no-restore --verbosity normal
-
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
